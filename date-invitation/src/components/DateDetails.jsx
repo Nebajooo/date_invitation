@@ -221,7 +221,10 @@ const DateDetails = ({ onSubmit }) => {
     <div className="details-container">
       <div className="details-header">
         <h2 className="details-title">Plan Our Perfect Date! 💕</h2>
-        <p className="subtitle">Let's make this unforgettable ✨</p>
+        <p className="subtitle">
+          I know you'll never choose no 🙄, because you're my real one. I'm so
+          happy you chose yes🤗.
+        </p>
       </div>
 
       {showLoveNote && (
