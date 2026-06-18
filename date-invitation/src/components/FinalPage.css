@@ -1,0 +1,366 @@
+.final-container {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 650px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: celebration 0.8s ease;
+}
+
+.final-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.final-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.final-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 10px;
+}
+
+.confetti {
+  font-size: 40px;
+  margin-bottom: 15px;
+  animation: spin 3s linear infinite;
+}
+
+.confetti span {
+  display: inline-block;
+  animation: confettiFall 2s ease-in-out infinite;
+}
+
+.confetti span:nth-child(1) {
+  animation-delay: 0s;
+}
+.confetti span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.confetti span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.confetti span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.confetti span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.confetti span:nth-child(6) {
+  animation-delay: 1s;
+}
+.confetti span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+.confetti span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+.final-title {
+  font-size: 2.5rem;
+  color: #764ba2;
+  margin-bottom: 10px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.final-subtitle {
+  margin-bottom: 20px;
+}
+
+.greeting {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.excited-text {
+  font-size: 1rem;
+  color: #f5576c;
+  font-weight: bold;
+}
+
+.date-details-card {
+  background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 15px 0;
+  border: 2px solid #764ba2;
+}
+
+.card-title {
+  color: #764ba2;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.date-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  transform: scale(1.02);
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail-icon {
+  font-size: 1.3rem;
+}
+
+.detail-text {
+  font-weight: bold;
+  color: #333;
+}
+
+.special-request {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  border-left: 4px solid #f5576c;
+}
+
+.request-icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.request-text {
+  font-style: italic;
+  color: #555;
+  margin: 0;
+}
+
+.countdown {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 12px;
+  border-radius: 50px;
+  margin: 15px 0;
+  color: white;
+  font-size: 1.1rem;
+  animation: pulse 2s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.countdown-icon {
+  font-size: 1.3rem;
+}
+
+.countdown-text strong {
+  font-size: 1.3rem;
+}
+
+.love-message {
+  margin: 20px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff5f5 0%, #fdf0f5 100%);
+  border-radius: 15px;
+  border: 2px dashed #f5576c;
+}
+
+.romantic-message {
+  font-size: 1.1rem;
+  color: #764ba2;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.excited-message {
+  font-size: 1rem;
+  color: #f5576c;
+  margin-bottom: 5px;
+}
+
+.promise-message {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.fun-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.fact-item {
+  background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #764ba2;
+  transition: all 0.3s ease;
+}
+
+.fact-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fact-item span:first-child {
+  font-size: 1.5rem;
+}
+
+.signature {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid #f093fb;
+}
+
+.signature p {
+  font-size: 1rem;
+  color: #764ba2;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.signature-emoji {
+  font-size: 0.9rem;
+  color: #f5576c;
+  font-weight: normal;
+}
+
+@keyframes celebration {
+  0% {
+    transform: scale(0.5) rotate(-5deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes confettiFall {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .final-container {
+    padding: 25px;
+    max-height: 95vh;
+  }
+
+  .final-title {
+    font-size: 2rem;
+  }
+
+  .confetti {
+    font-size: 30px;
+  }
+
+  .fun-facts {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .fact-item {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .detail-item {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .date-details-card {
+    padding: 15px;
+  }
+
+  .countdown {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .romantic-message {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .final-container {
+    padding: 20px;
+  }
+
+  .final-title {
+    font-size: 1.5rem;
+  }
+
+  .confetti {
+    font-size: 25px;
+  }
+
+  .fun-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .fact-item {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .detail-item {
+    flex-direction: row;
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+
+  .detail-icon {
+    font-size: 1rem;
+  }
+}

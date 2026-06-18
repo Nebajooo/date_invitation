@@ -1,0 +1,129 @@
+.proposal-container {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.heart-animation {
+  font-size: 40px;
+  margin-bottom: 20px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.heart-animation span {
+  display: inline-block;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.heart-animation span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.heart-animation span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.proposal-title {
+  font-size: 2.5rem;
+  color: #764ba2;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.proposal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 80px;
+}
+
+.yes-button {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+  z-index: 10;
+}
+
+.yes-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+}
+
+.no-button {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background: #666;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.message-bubble {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f093fb;
+  color: white;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  animation: bounce 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
