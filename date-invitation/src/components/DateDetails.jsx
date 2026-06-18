@@ -11,6 +11,8 @@ const DateDetails = ({ onSubmit }) => {
     activity: "",
     dressCode: "",
     specialRequest: "",
+    herName: "", // New: Her name
+    herEmail: "", // New: Her email
   });
 
   const [showLoveNote, setShowLoveNote] = useState(false);
@@ -25,7 +27,7 @@ const DateDetails = ({ onSubmit }) => {
         "☀️ Sunny",
         "⛅ Partly Cloudy",
         "🌤️ Nice",
-        "🌹 Perfect",
+        "🌈 Perfect",
         "☁️ Mild",
       ];
       const randomWeather =
@@ -49,7 +51,7 @@ const DateDetails = ({ onSubmit }) => {
       image: "🌸",
     },
     {
-      name: "Sunset 🏖️",
+      name: "Beach Sunset 🏖️",
       emoji: "🏖️",
       vibe: "Dreamy & Relaxing",
       image: "🌅",
@@ -61,13 +63,13 @@ const DateDetails = ({ onSubmit }) => {
       image: "📚",
     },
     {
-      name: "Bowling 🎳 ",
-      emoji: "🎳",
-      vibe: "Exciting & Cool",
-      image: "🧑‍🤝‍🧑",
+      name: "Theme Park 🎢",
+      emoji: "🎢",
+      vibe: "Exciting & Adventurous",
+      image: "🎡",
     },
     {
-      name: "Museum 🏛️",
+      name: "Art Museum 🏛️",
       emoji: "🏛️",
       vibe: "Cultural & Inspiring",
       image: "🎨",
@@ -78,37 +80,37 @@ const DateDetails = ({ onSubmit }) => {
       vibe: "Elegant & Stunning",
       image: "🌃",
     },
-    // {
-    //   name: "Botanical Garden 🌺",
-    //   emoji: "🌺",
-    //   vibe: "Serene & Beautiful",
-    //   image: "🦋",
-    // },
-    // {
-    //   name: "Arcade Games 🎮",
-    //   emoji: "🎮",
-    //   vibe: "Playful & Fun",
-    //   image: "🏆",
-    // },
+    {
+      name: "Botanical Garden 🌺",
+      emoji: "🌺",
+      vibe: "Serene & Beautiful",
+      image: "🦋",
+    },
+    {
+      name: "Arcade Games 🎮",
+      emoji: "🎮",
+      vibe: "Playful & Fun",
+      image: "🏆",
+    },
   ];
 
   const foods = [
     {
-      name: "Pasta 🍝",
+      name: "Italian Pasta 🍝",
       emoji: "🍝",
       type: "Comfort Food",
       image: "🇮🇹",
     },
     {
-      name: "Tibs 🥩",
-      emoji: "🥩",
+      name: "Sushi Delight 🍣",
+      emoji: "🍣",
       type: "Fresh & Elegant",
-      image: "🥩",
+      image: "🇯🇵",
     },
-    { name: "Lasagna 🍝", emoji: "🍝", type: "Spicy & Fun", image: "🍝" },
+    { name: "Mexican Tacos 🌮", emoji: "🌮", type: "Spicy & Fun", image: "🇲🇽" },
     {
-      name: "Ertib 🍔",
-      emoji: "🍔",
+      name: "Steak Dinner 🥩",
+      emoji: "🥩",
       type: "Classic & Luxurious",
       image: "🔥",
     },
@@ -119,16 +121,16 @@ const DateDetails = ({ onSubmit }) => {
       image: "🇮🇹",
     },
     {
-      name: "Burger 🍔",
-      emoji: "🍔",
+      name: "Healthy Bowl 🥗",
+      emoji: "🥗",
       type: "Fresh & Nutritious",
-      image: "🍔",
+      image: "🌿",
     },
     {
-      name: "Seafood 🐟",
-      emoji: "🐟",
+      name: "Seafood Feast 🦞",
+      emoji: "🦞",
       type: "Luxury & Exquisite",
-      image: "🐟",
+      image: "🌊",
     },
     {
       name: "Dessert First 🍰",
@@ -137,28 +139,28 @@ const DateDetails = ({ onSubmit }) => {
       image: "🎂",
     },
     {
-      name: "Noodles 🍜",
+      name: "Thai Cuisine 🍜",
       emoji: "🍜",
       type: "Flavorful & Aromatic",
-      image: "🍜",
+      image: "🇹🇭",
     },
     {
-      name: "Chicken 🍗 ",
-      emoji: "🍗",
-      type: "Testy & Yummy",
-      image: "🍗 ",
+      name: "Brunch Date 🥞",
+      emoji: "🥞",
+      type: "Relaxed & Yummy",
+      image: "☕",
     },
   ];
 
   const desserts = [
     "Chocolate Cake 🍫",
-    "Ice Cream  🍦",
+    "Ice Cream Sundae 🍦",
     "Cheesecake 🍰",
-    "Red Velvet Cake ❤️",
+    "Macarons 🎀",
     "Tiramisu ☕",
-    "Black Forest Cake 🍒",
-    "Vanilla Sponge Cake 🎂",
-    "Fruit Cake 🍓",
+    "Fruit Tart 🍓",
+    "Brownie Fudge 🍫",
+    "Crème Brûlée 🔥",
   ];
 
   const activities = [
@@ -195,18 +197,27 @@ const DateDetails = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.date && formData.time && formData.place && formData.food) {
-      // Add some fun animation before submission
-      const button = e.target.querySelector(".submit-button");
-      button.textContent = "🎉 Planning...";
-      button.style.transform = "scale(0.95)";
 
-      setTimeout(() => {
-        onSubmit(formData);
-      }, 800);
-    } else {
+    // Validate required fields
+    if (!formData.date || !formData.time || !formData.place || !formData.food) {
       alert("Please fill in all the important details! 💕");
+      return;
     }
+
+    // Validate email if provided
+    if (formData.herEmail && !formData.herEmail.includes("@")) {
+      alert("Please enter a valid email address 📧");
+      return;
+    }
+
+    // Add some fun animation before submission
+    const button = e.target.querySelector(".submit-button");
+    button.textContent = "🎉 Sending...";
+    button.style.transform = "scale(0.95)";
+
+    setTimeout(() => {
+      onSubmit(formData);
+    }, 800);
   };
 
   // Get today's date for min date
@@ -221,10 +232,7 @@ const DateDetails = ({ onSubmit }) => {
     <div className="details-container">
       <div className="details-header">
         <h2 className="details-title">Plan Our Perfect Date! 💕</h2>
-        <p className="subtitle">
-          I know you'll never choose no 🙄, because you're my real one. I'm so
-          happy you chose yes🤗.
-        </p>
+        <p className="subtitle">Let's make this unforgettable ✨</p>
       </div>
 
       {showLoveNote && (
@@ -234,6 +242,37 @@ const DateDetails = ({ onSubmit }) => {
       )}
 
       <form onSubmit={handleSubmit} className="details-form">
+        {/* Personal Information */}
+        <div className="form-group personal-info">
+          <label>
+            <span className="label-icon">💝</span>
+            Your Information (So I can send you surprise details!)
+          </label>
+          <div className="personal-grid">
+            <input
+              type="text"
+              placeholder="Your Name 💕"
+              value={formData.herName}
+              onChange={(e) =>
+                setFormData({ ...formData, herName: e.target.value })
+              }
+              className="personal-input"
+            />
+            <input
+              type="email"
+              placeholder="Your Email 📧 (optional)"
+              value={formData.herEmail}
+              onChange={(e) =>
+                setFormData({ ...formData, herEmail: e.target.value })
+              }
+              className="personal-input"
+            />
+          </div>
+          <p className="hint-text">
+            ✨ Enter your email to get date reminders!
+          </p>
+        </div>
+
         {/* Date Selection with Weather */}
         <div className="form-group date-group">
           <label>
@@ -275,10 +314,10 @@ const DateDetails = ({ onSubmit }) => {
           >
             <option value="">Pick a time...</option>
             <option value="10:00 AM">Morning ☀️ (10:00 AM)</option>
-            <option value="12:00 PM">Mid Day 🌤️ (12:00 PM)</option>
-            <option value="2:00 PM">Afternoon 🌞 (2:00 PM)</option>
-            <option value="5:00 PM">Early Afternoon 🌅 (5:00 PM)</option>
-            <option value="7:00 PM">Evening 🌙 (7:00 PM)</option>
+            <option value="12:00 PM">Afternoon 🌤️ (12:00 PM)</option>
+            <option value="2:00 PM">Early Afternoon 🌞 (2:00 PM)</option>
+            <option value="5:00 PM">Evening 🌅 (5:00 PM)</option>
+            <option value="7:00 PM">Night 🌙 (7:00 PM)</option>
             <option value="8:30 PM">Late Night ✨ (8:30 PM)</option>
           </select>
         </div>
@@ -413,6 +452,7 @@ const DateDetails = ({ onSubmit }) => {
           <div className="date-preview">
             <h4>✨ Your Perfect Date Plan ✨</h4>
             <div className="preview-items">
+              {formData.herName && <span>💝 {formData.herName}</span>}
               <span>
                 📅{" "}
                 {new Date(formData.date).toLocaleDateString("en-US", {
@@ -436,6 +476,9 @@ const DateDetails = ({ onSubmit }) => {
 
         <div className="date-note">
           <p>❤️ I'll make sure everything is perfect for you!</p>
+          <p className="email-note">
+            📧 You'll receive a confirmation email with all details!
+          </p>
         </div>
       </form>
     </div>
