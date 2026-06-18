@@ -47,7 +47,6 @@ const FinalPage = ({ dateData }) => {
         <span>🌟</span>
         <span>🎆</span>
         <span>💕</span>
-        <span>🌈</span>
       </div>
 
       <h1 className="final-title">Yay! It's a Date! 💕</h1>
@@ -160,7 +159,7 @@ const FinalPage = ({ dateData }) => {
       </div>
 
       <div className="signature">
-        <p>Made with ❤️ by Shashwat</p>
+        <p>Made with ❤️ by Neba </p>
         <p className="signature-emoji">✨ Forever Yours ✨</p>
       </div>
     </div>

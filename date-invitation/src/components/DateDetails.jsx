@@ -25,7 +25,7 @@ const DateDetails = ({ onSubmit }) => {
         "☀️ Sunny",
         "⛅ Partly Cloudy",
         "🌤️ Nice",
-        "🌈 Perfect",
+        "🌹 Perfect",
         "☁️ Mild",
       ];
       const randomWeather =
@@ -49,7 +49,7 @@ const DateDetails = ({ onSubmit }) => {
       image: "🌸",
     },
     {
-      name: "Beach Sunset 🏖️",
+      name: "Sunset 🏖️",
       emoji: "🏖️",
       vibe: "Dreamy & Relaxing",
       image: "🌅",
@@ -61,13 +61,13 @@ const DateDetails = ({ onSubmit }) => {
       image: "📚",
     },
     {
-      name: "Theme Park 🎢",
-      emoji: "🎢",
-      vibe: "Exciting & Adventurous",
-      image: "🎡",
+      name: "Bowling 🎳 ",
+      emoji: "🎳",
+      vibe: "Exciting & Cool",
+      image: "🧑‍🤝‍🧑",
     },
     {
-      name: "Art Museum 🏛️",
+      name: "Museum 🏛️",
       emoji: "🏛️",
       vibe: "Cultural & Inspiring",
       image: "🎨",
@@ -78,37 +78,37 @@ const DateDetails = ({ onSubmit }) => {
       vibe: "Elegant & Stunning",
       image: "🌃",
     },
-    {
-      name: "Botanical Garden 🌺",
-      emoji: "🌺",
-      vibe: "Serene & Beautiful",
-      image: "🦋",
-    },
-    {
-      name: "Arcade Games 🎮",
-      emoji: "🎮",
-      vibe: "Playful & Fun",
-      image: "🏆",
-    },
+    // {
+    //   name: "Botanical Garden 🌺",
+    //   emoji: "🌺",
+    //   vibe: "Serene & Beautiful",
+    //   image: "🦋",
+    // },
+    // {
+    //   name: "Arcade Games 🎮",
+    //   emoji: "🎮",
+    //   vibe: "Playful & Fun",
+    //   image: "🏆",
+    // },
   ];
 
   const foods = [
     {
-      name: "Italian Pasta 🍝",
+      name: "Pasta 🍝",
       emoji: "🍝",
       type: "Comfort Food",
       image: "🇮🇹",
     },
     {
-      name: "Sushi Delight 🍣",
-      emoji: "🍣",
-      type: "Fresh & Elegant",
-      image: "🇯🇵",
-    },
-    { name: "Mexican Tacos 🌮", emoji: "🌮", type: "Spicy & Fun", image: "🇲🇽" },
-    {
-      name: "Steak Dinner 🥩",
+      name: "Tibs 🥩",
       emoji: "🥩",
+      type: "Fresh & Elegant",
+      image: "🥩",
+    },
+    { name: "Lasagna 🍝", emoji: "🍝", type: "Spicy & Fun", image: "🍝" },
+    {
+      name: "Ertib 🍔",
+      emoji: "🍔",
       type: "Classic & Luxurious",
       image: "🔥",
     },
@@ -119,16 +119,16 @@ const DateDetails = ({ onSubmit }) => {
       image: "🇮🇹",
     },
     {
-      name: "Healthy Bowl 🥗",
-      emoji: "🥗",
+      name: "Burger 🍔",
+      emoji: "🍔",
       type: "Fresh & Nutritious",
-      image: "🌿",
+      image: "🍔",
     },
     {
-      name: "Seafood Feast 🦞",
-      emoji: "🦞",
+      name: "Seafood 🐟",
+      emoji: "🐟",
       type: "Luxury & Exquisite",
-      image: "🌊",
+      image: "🐟",
     },
     {
       name: "Dessert First 🍰",
@@ -137,28 +137,28 @@ const DateDetails = ({ onSubmit }) => {
       image: "🎂",
     },
     {
-      name: "Thai Cuisine 🍜",
+      name: "Noodles 🍜",
       emoji: "🍜",
       type: "Flavorful & Aromatic",
-      image: "🇹🇭",
+      image: "🍜",
     },
     {
-      name: "Brunch Date 🥞",
-      emoji: "🥞",
-      type: "Relaxed & Yummy",
-      image: "☕",
+      name: "Chicken 🍗 ",
+      emoji: "🍗",
+      type: "Testy & Yummy",
+      image: "🍗 ",
     },
   ];
 
   const desserts = [
     "Chocolate Cake 🍫",
-    "Ice Cream Sundae 🍦",
+    "Ice Cream  🍦",
     "Cheesecake 🍰",
-    "Macarons 🎀",
+    "Red Velvet Cake ❤️",
     "Tiramisu ☕",
-    "Fruit Tart 🍓",
-    "Brownie Fudge 🍫",
-    "Crème Brûlée 🔥",
+    "Black Forest Cake 🍒",
+    "Vanilla Sponge Cake 🎂",
+    "Fruit Cake 🍓",
   ];
 
   const activities = [
@@ -272,10 +272,10 @@ const DateDetails = ({ onSubmit }) => {
           >
             <option value="">Pick a time...</option>
             <option value="10:00 AM">Morning ☀️ (10:00 AM)</option>
-            <option value="12:00 PM">Afternoon 🌤️ (12:00 PM)</option>
-            <option value="2:00 PM">Early Afternoon 🌞 (2:00 PM)</option>
-            <option value="5:00 PM">Evening 🌅 (5:00 PM)</option>
-            <option value="7:00 PM">Night 🌙 (7:00 PM)</option>
+            <option value="12:00 PM">Mid Day 🌤️ (12:00 PM)</option>
+            <option value="2:00 PM">Afternoon 🌞 (2:00 PM)</option>
+            <option value="5:00 PM">Early Afternoon 🌅 (5:00 PM)</option>
+            <option value="7:00 PM">Evening 🌙 (7:00 PM)</option>
             <option value="8:30 PM">Late Night ✨ (8:30 PM)</option>
           </select>
         </div>
