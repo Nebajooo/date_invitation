@@ -32,6 +32,20 @@ const ProposalPage = ({ onYes }) => {
     "You're so mean! 😤",
     "I'll keep asking! 😘",
     "Just say yes! 💕",
+    "Don't say no! 🚫",
+    "I'll pout forever! 😣",
+    "You'll regret it! 😏",
+    "Don't make me wait! ⏳",
+    "I'll bribe you with cake! 🍰",
+    "Think of the fun! 🎉",
+    "You know you want to! 😉",
+    "I'll be your ..........foverever! 🤝",
+    "Don't be cruel! 😬",
+    "I'll owe you big time! 💸",
+    "Say yes already! 🗣️",
+    "I'll give you chocolate! 🍫",
+    "Don't break the vibe! 🎶",
+    "Let's Dance! 😉 🎶",
   ];
 
   const handleNoHover = () => {
@@ -42,7 +56,7 @@ const ProposalPage = ({ onYes }) => {
     setNoButtonPosition({ x: newX, y: newY });
     setNoCount((prev) => prev + 1);
 
-    if (noCount >= 8) {
+    if (noCount >= 3) {
       setShowMessage(true);
     }
   };
