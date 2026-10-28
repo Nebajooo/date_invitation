@@ -16,8 +16,8 @@ const DateDetails = ({ onSubmit }) => {
   });
 
   const [showLoveNote, setShowLoveNote] = useState(false);
-  const [selectedPlaceImage] = useState("");
-  const [selectedFoodImage] = useState("");
+  const [, setSelectedPlaceImage] = useState("");
+  const [, setSelectedFoodImage] = useState("");
   const [weather, setWeather] = useState("☀️");
 
   // Simulated weather based on date
